@@ -1,0 +1,16 @@
+<div class="main-layout">
+  <h1>{{title}}</h1>
+  <nav>
+    <tr><a routerLink="/dashboard">Dashboard</a></tr>
+    <tr><a routerLink="/heroes">Heroes</a></tr>
+    <button (click)="onLoginoutClick()">退出</button>
+    <button (click)="onLoginoutDelay()">退出(延迟关闭)</button>
+  </nav>
+  <router-outlet></router-outlet>
+  <app-messages></app-messages>
+
+  <app-confirmation-box></app-confirmation-box>
+  <div>{{show}}</div>
+</div>
+
+
