@@ -1,6 +1,6 @@
 import {AfterViewInit, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
-import { YConfirmationBoxComponent } from './y-confirmation-box/y-confirmation-box.component';
-import {YPromptBoxComponent} from "./y-prompt-box/y-prompt-box.component";
+import { ZConfirmationBoxComponent } from './z-confirmation-box/z-confirmation-box.component';
+import {ZPromptBoxComponent} from "./z-prompt-box/z-prompt-box.component";
 
 @Component({
   selector: 'app-root',
@@ -11,8 +11,8 @@ export class AppComponent implements AfterViewInit {
   title = 'Tour of Heroes';
   show: string;
 
-  @ViewChild(YConfirmationBoxComponent) public confirmationBox: YConfirmationBoxComponent;
-  @ViewChild(YPromptBoxComponent) public promptBox: YPromptBoxComponent;
+  @ViewChild(ZConfirmationBoxComponent) public confirmationBox: ZConfirmationBoxComponent;
+  @ViewChild(ZPromptBoxComponent) public promptBox: ZPromptBoxComponent;
 
   constructor() {
   }
@@ -31,7 +31,7 @@ export class AppComponent implements AfterViewInit {
   }
 
   public onLoginoutDelay() {
-    this.promptBox.openDelay('保存成功', () => {
+    this.promptBox.open('保存成功', () => {
         this.promptBox.close();
         this.show = '已自动关闭';
       });

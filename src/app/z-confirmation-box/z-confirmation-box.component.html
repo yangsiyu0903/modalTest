@@ -1,0 +1,23 @@
+<!-- 提示模态框 -->
+<div class="z-modal z-fade" data-keyboard="true" data-backdrop="false" tabindex="-1" role="dialog" style="display: none; " #promptDiv>
+  <div class="z-modal-dialog">
+    <div class="z-modal-content">
+      <div class="z-modal-header z-color">
+        <span class="z-modal-title z-font">{{title}}</span>
+        <span class="z-warn-icon"></span>
+        <button type="button" class="z-close" aria-label="Close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <form class="z-form-horizontal">
+        <div class="z-modal-body z-font">
+          <div>{{message}}</div>
+        </div>
+      </form>
+      <div class="z-modal-footer">
+        <button class="z-close-btn color" nz-button (click)="close()">取消</button>
+        <button class="z-sure-btn z-color" nz-button nzType="primary" (click)="submit()">{{sureName}}</button>
+      </div>
+    </div>
+  </div>
+</div>

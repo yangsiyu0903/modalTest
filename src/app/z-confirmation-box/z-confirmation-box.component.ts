@@ -2,11 +2,11 @@ import {Component, Input, ViewChild, ElementRef, AfterViewInit, Output, EventEmi
 import {Subscription, timer} from 'rxjs';
 
 @Component({
-  selector: 'app-y-prompt-box',
-  templateUrl: './y-prompt-box.component.html',
-  styleUrls: ['./y-prompt-box.component.css']
+  selector: 'app-z-confirmation-box',
+  templateUrl: './z-confirmation-box.component.html',
+  styleUrls: ['./z-confirmation-box.component.css']
 })
-export class YPromptBoxComponent implements AfterViewInit {
+export class ZConfirmationBoxComponent implements AfterViewInit {
 
   private sureCallback: any;
   private closeCallback: any;
@@ -14,7 +14,12 @@ export class YPromptBoxComponent implements AfterViewInit {
 
   @Input() public message: string;
 
+  @Input() public sureName: string;
+
+  @Input() public title: string;
+
   @ViewChild('promptDiv') public promptDiv: ElementRef;
+
 
   /**
    * 模态框消失，如果有关闭回调则执行，释放订阅。
@@ -25,11 +30,22 @@ export class YPromptBoxComponent implements AfterViewInit {
         const temp = this.closeCallback;
         this.closeCallback = null;
         this.sureCallback = null;
-        //订阅释放
         this.subscription && this.subscription.unsubscribe();
         temp();
       }
     });
+  }
+
+  /**
+  * 确定按钮触发，判断是否有确定回调方法，有则执行。
+  * */
+  public submit() {
+    if (this.sureCallback) {
+      const temp = this.sureCallback;
+      this.closeCallback = null;
+      this.sureCallback = null;
+      temp();
+    }
   }
 
   /**
@@ -46,19 +62,15 @@ export class YPromptBoxComponent implements AfterViewInit {
    * @param sureName 确认按钮文本(默认为确定)
    * @param sureFunc 确认回调
    * @param closeFunc 取消回调
-   * @param delay 延时关闭时间
    */
-
-  public openDelay(message: string, closeFunc: any = null, delay: number = 2000) {
+  public open(message: any, sureFunc: any, title: string = '提示', sureName: string = '确定', closeFunc: any = null) {
+    this.message = message;
+    this.sureName = sureName;
+    this.sureCallback = sureFunc;
+    this.closeCallback = closeFunc;
+    this.title = title;
     timer(0).subscribe(() => {
-      this.message = message;
       $(this.promptDiv.nativeElement).modal('show');
     });
-    this.closeCallback = closeFunc;
-    if (delay !== -1) {
-      this.subscription = timer(delay).subscribe(() => {
-        this.close();
-      });
-    }
   }
 }

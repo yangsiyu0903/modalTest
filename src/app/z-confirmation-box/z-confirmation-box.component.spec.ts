@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { YPromptBoxComponent } from './y-prompt-box.component';
+import { ZConfirmationBoxComponent } from './z-confirmation-box.component';
 
-describe('YPromptBoxComponent', () => {
-  let component: YPromptBoxComponent;
-  let fixture: ComponentFixture<YPromptBoxComponent>;
+describe('ZPromptBoxComponent', () => {
+  let component: ZConfirmationBoxComponent;
+  let fixture: ComponentFixture<ZConfirmationBoxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ YPromptBoxComponent ]
+      declarations: [ ZConfirmationBoxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(YPromptBoxComponent);
+    fixture = TestBed.createComponent(ZConfirmationBoxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

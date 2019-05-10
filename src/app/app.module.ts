@@ -9,8 +9,8 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { MessagesComponent } from './messages/messages.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { YConfirmationBoxComponent } from './y-confirmation-box/y-confirmation-box.component';
-import {YPromptBoxComponent} from "./y-prompt-box/y-prompt-box.component";
+import { ZConfirmationBoxComponent } from './z-confirmation-box/z-confirmation-box.component';
+import { ZPromptBoxComponent } from "./z-prompt-box/z-prompt-box.component";
 
 @NgModule({
   imports: [
@@ -24,8 +24,8 @@ import {YPromptBoxComponent} from "./y-prompt-box/y-prompt-box.component";
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    YConfirmationBoxComponent,
-    YPromptBoxComponent
+    ZConfirmationBoxComponent,
+    ZPromptBoxComponent
   ],
   providers: [],
   bootstrap: [ AppComponent ]
