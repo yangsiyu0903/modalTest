@@ -33,18 +33,6 @@ export class YPromptBoxComponent implements AfterViewInit {
   }
 
   /**
-  * 确定按钮触发，判断是否有确定回调方法，有则执行。
-  * */
-  public submit() {
-    if (this.sureCallback) {
-      const temp = this.sureCallback;
-      this.closeCallback = null;
-      this.sureCallback = null;
-      temp();
-    }
-  }
-
-  /**
   * 取消按钮触发关闭模态框，释放订阅。
   * */
   public close() {

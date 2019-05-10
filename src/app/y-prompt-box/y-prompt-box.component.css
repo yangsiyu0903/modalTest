@@ -90,7 +90,7 @@
   width: auto;
 }
 
-.y-close , .close:hover {
+.y-close , .close {
   outline: none;
   color: #fff;
   opacity: 1;
@@ -101,6 +101,10 @@
   font-size:24px;
   font-family:PingFangSC-Medium;
   margin-right: 10px;
+}
+
+.y-close:hover {
+  font-size:26px;
 }
 
 .modal-warning-icon{
