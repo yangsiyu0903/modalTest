@@ -1,0 +1,22 @@
+<!-- 提示模态框 -->
+<div class="y-modal" data-keyboard="true" data-backdrop="false" tabindex="-1" role="dialog" style="display: none; " #promptDiv>
+  <div class="y-modal-dialog">
+    <div class="y-modal-content">
+      <div class="y-modal-header y-color">
+        <span class="y-modal-title y-font">提示</span>
+        <button type="button" class="y-close" aria-label="Close" data-dismiss="modal">
+          &times;
+        </button>
+      </div>
+      <form class="y-form-horizontal">
+        <div class="y-modal-body y-font">
+          <div class="modal-warning-icon"></div>
+          <div class="msg-prompt font">{{message}}</div>
+        </div>
+      </form>
+      <div class="y-modal-footer">
+        <button class="y-sure-btn y-color" nz-button nzType="primary" (click)="submit()">确定</button>
+      </div>
+    </div>
+  </div>
+</div>

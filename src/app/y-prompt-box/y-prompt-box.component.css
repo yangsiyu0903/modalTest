@@ -1,0 +1,128 @@
+/*提示模态框*/
+.y-modal {
+  background:rgba(55,60,64,0.77);
+  z-index: 1200;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding-left: 0px !important;
+}
+
+.y-modal-title {
+  float: left;
+  margin-left: 10px;
+}
+
+.y-modal-header {
+  border-radius: 0!important;
+  height:40px;
+  line-height: 40px;
+}
+
+.y-modal-dialog {
+  width: 360px;
+  height:253px;
+  margin: 10% auto;
+  border-radius: 0!important;
+  animation-delay: 20ms;
+}
+
+.y-modal-footer {
+  padding: 0.5rem 1rem;
+  border-top:0!important;
+}
+
+.y-modal-content {
+  height: 100%;
+  color: #0e0e0e !important;
+  background: #fff;
+  box-shadow: none;
+  border:none;
+  border-radius: 0!important;
+}
+
+.y-modal-body {
+  text-align: left;
+  font-weight:500;
+  color:rgba(55,60,64,1);
+}
+
+.y-modal-footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.y-modal-footer button{
+  font-weight:500;
+}
+
+.y-sure-btn{
+  width:179px;
+  height:40px;
+  border:none;
+  border-radius:25px;
+  cursor: pointer;
+  outline: 0px;
+}
+
+.y-sure-btn:hover {
+  background: rgba(0,193,222,0.7);
+}
+
+@-webkit-keyframes fade-in { /*针对webkit内核*/
+  0% {
+    opacity: 0;
+  }
+  7.5% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+}
+
+.y-form-horizontal {
+  margin-top:40px;
+  margin-bottom:8px;
+  width: auto;
+}
+
+.y-close , .close:hover {
+  outline: none;
+  color: #fff;
+  opacity: 1;
+  border: 0;
+  float: right;
+  line-height: inherit;
+  background: none;
+  font-size:24px;
+  font-family:PingFangSC-Medium;
+  margin-right: 10px;
+}
+
+.modal-warning-icon{
+  width: 60px;
+  height: 60px;
+  background: url(/assets/images/success.png);
+  margin:0 auto 10px;
+}
+
+.msg-prompt{
+  font-weight:500;
+  color:rgba(55,60,64,1);
+  text-align: center;
+}
+
+/*可变样式*/
+.y-font {
+  font-size:18px;
+  font-family:PingFangSC-Medium;
+}
+
+.y-color {
+  background: rgba(0, 193, 222, 1);
+  color: #fff;
+}

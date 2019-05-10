@@ -1,5 +1,5 @@
 /*提示模态框*/
-.ymodal {
+.y-modal {
   background:rgba(55,60,64,0.77);
   z-index: 1200;
   overflow: hidden;
@@ -10,24 +10,23 @@
   padding-left: 0px !important;
 }
 
-.yfade {
+.y-fade {
   opacity:0;
   -webkit-transition:opacity .15s linear;
   -o-transition:opacity .15s linear;
   transition:opacity .15s linear;
 }
 
-.yfade.in{opacity:1;
-  transition-property: opacity;}
+.y-fade.in{opacity:1;
+  transition-property: opacity;
+}
 
-.ymodal-title {
+.y-modal-title {
   float: left;
-  font-size:18px;
-  font-family:PingFangSC-Medium;
   margin-left: 10px;
 }
 
-.ymodal-dialog {
+.y-modal-dialog {
   width: 550px;
   height:283px;
   margin: 10% auto;
@@ -35,20 +34,18 @@
   animation-delay: 20ms;
 }
 
-.ymodal-header {
-  background:rgba(0,193,222,1);
-  color:#fff;
+.y-modal-header {
   border-radius: 0!important;
   height:50px;
   line-height: 50px;
 }
 
-.ymodal-footer {
+.y-modal-footer {
   padding: 0.5rem 1rem;
   border-top:0!important;
 }
 
-.ymodal-content {
+.y-modal-content {
   height: 100%;
   color: #0e0e0e !important;
   background: #fff;
@@ -57,47 +54,44 @@
   border-radius: 0!important;
 }
 
-h4{
-  color:#fff!important;
-}
-
-.ymodal-body {
+.y-modal-body {
   text-align: left;
-  padding:0;
   padding-left: 40px;
-  font-size:18px;
-  font-family:STHeitiSC-Medium;
   font-weight:500;
   color:rgba(55,60,64,1);
 }
 
-.ymodal-footer{
+.y-modal-footer{
   display: flex;
   justify-content: space-around;
 }
 
-.ymodal-footer button{
+.y-modal-footer button{
   font-family:PingFangSC-Medium;
   font-weight:500;
   font-size: 18px;
 }
 
-.yclose-btn{
-  color:rgba(0,193,222,1);
-  background: #fff;
+.y-close-btn{
   width:179px;
   height:50px;
   border-radius:25px;
-  border:1px solid rgba(0,193,222,1);
+  border:1px solid;
+  cursor: pointer;
+  outline: 0px;
 }
 
-.ysure-btn{
+.y-sure-btn{
   width:179px;
   height:50px;
-  background:rgba(0,193,222,1);
   border:none;
   border-radius:25px;
-  color:#fff;
+  cursor: pointer;
+  outline: 0px;
+}
+
+.y-sure-btn:hover {
+  background: rgba(0,193,222,0.7);
 }
 
 @-webkit-keyframes fade-in { /*针对webkit内核*/
@@ -112,13 +106,13 @@ h4{
   }
 }
 
-.yform-horizontal {
+.y-form-horizontal {
   margin-top:50px;
   margin-bottom:64px;
   width: auto;
 }
 
-.yclose , .close:hover {
+.y-close , .close:hover {
   outline: none;
   color: #fff;
   opacity: 1;
@@ -129,4 +123,21 @@ h4{
   font-size:24px;
   font-family:PingFangSC-Medium;
   margin-right: 10px;
+}
+
+/*可变样式*/
+.y-font {
+  font-size:18px;
+  font-family:PingFangSC-Medium;
+}
+
+.y-color {
+  background: rgba(0, 193, 222, 1);
+  color: #fff;
+}
+
+.y-close-btn.color {
+  color: rgba(0, 193, 222, 1);
+  background: #fff;
+  border-bottom-color: rgba(0, 193, 222, 1);
 }
