@@ -107,14 +107,23 @@
   font-size:26px;
 }
 
-.modal-warning-icon{
+.y-modal-warning-icon{
   width: 60px;
   height: 60px;
   background: url(/assets/images/success.png);
   margin:0 auto 10px;
 }
 
-.msg-prompt{
+.y-warn-icon{
+  width: 22px;
+  height: 22px;
+  margin:8px 5px;
+  background: url(/assets/images/warn.png);
+  display: block;
+  float: left;
+}
+
+.y-msg-prompt{
   font-weight:500;
   color:rgba(55,60,64,1);
   text-align: center;

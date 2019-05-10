@@ -24,7 +24,7 @@ export class AppComponent implements AfterViewInit {
     this.confirmationBox.open('确认退出?', () => {
       this.confirmationBox.close();
       this.show = '已确定';
-    }, '提示！', '确定',
+    }, '提示', '确定',
       () => {
         this.show = '已取消';
     });

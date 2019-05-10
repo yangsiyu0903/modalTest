@@ -94,6 +94,15 @@
   background: rgba(0,193,222,0.7);
 }
 
+.y-warn-icon{
+  width: 22px;
+  height: 22px;
+  margin:12px 5px;
+  background: url(/assets/images/warn.png);
+  display: block;
+  float: left;
+}
+
 @-webkit-keyframes fade-in { /*针对webkit内核*/
   0% {
     opacity: 0;
