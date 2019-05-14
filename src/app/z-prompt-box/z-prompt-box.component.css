@@ -1,5 +1,5 @@
 /*提示模态框*/
-.y-modal {
+.z-modal {
   background:rgba(55,60,64,0.77);
   z-index: 1200;
   overflow: hidden;
@@ -11,56 +11,59 @@
   padding-left: 0px !important;
 }
 
-.y-modal-title {
+.z-modal-title {
   float: left;
   margin-left: 10px;
 }
 
-.y-modal-header {
+.z-modal-header {
   border-radius: 0!important;
   height:40px;
   line-height: 40px;
 }
 
-.y-modal-dialog {
-  width: 360px;
-  height:253px;
-  margin: 10% auto;
+.z-modal-dialog {
+  width: 360px!important;
+  /*height: 253px!important;*/
   border-radius: 0!important;
   animation-delay: 20ms;
+  margin: 1.75rem auto;
 }
 
-.y-modal-footer {
-  padding: 0.5rem 1rem;
+.z-modal-footer {
+  padding: 1rem;
   border-top:0!important;
 }
 
-.y-modal-content {
+.z-modal-content {
   height: 100%;
   color: #0e0e0e !important;
   background: #fff;
   box-shadow: none;
   border:none;
   border-radius: 0!important;
+  align-items: center;
+  margin-top: 339px;
 }
 
-.y-modal-body {
+.z-modal-body {
   text-align: left;
   font-weight:500;
   color:rgba(55,60,64,1);
+  padding: 16px;
 }
 
-.y-modal-footer{
+.z-modal-footer{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-.y-modal-footer button{
+.z-modal-footer button{
   font-weight:500;
 }
 
-.y-sure-btn{
+.z-sure-btn{
   width:179px;
   height:50px;
   border:none;
@@ -68,9 +71,10 @@
   cursor: pointer;
   outline: 0px;
   font-size: 14px;
+  padding: 15px;
 }
 
-.y-sure-btn:hover {
+.z-sure-btn:hover {
   background: rgba(0,193,222,0.7);
 }
 
@@ -86,13 +90,11 @@
   }
 }
 
-.y-form-horizontal {
-  margin-top:40px;
-  margin-bottom:8px;
+.z-form-horizontal {
   width: auto;
 }
 
-.y-close , .close {
+.z-close , .close {
   outline: none;
   color: #fff;
   opacity: 1;
@@ -105,18 +107,18 @@
   margin-right: 10px;
 }
 
-.y-close:hover {
+.z-close:hover {
   font-size:26px;
 }
 
-.y-modal-warning-icon{
+.z-modal-warning-icon{
   width: 60px;
   height: 60px;
   background: url(/assets/images/success.png);
-  margin:0 auto 10px;
+  margin:0 auto 20px;
 }
 
-.y-warn-icon{
+.z-warn-icon{
   width: 22px;
   height: 22px;
   margin:8px 5px;
@@ -125,19 +127,20 @@
   float: left;
 }
 
-.y-msg-prompt{
+.z-msg-prompt{
   font-weight:500;
   color:rgba(55,60,64,1);
   text-align: center;
 }
 
 /*可变样式*/
-.y-font {
+.z-font {
   font-size:18px;
   font-family:PingFangSC-Medium;
 }
 
-.y-color {
+.z-color {
   background: rgba(0, 193, 222, 1);
   color: #fff;
 }
+

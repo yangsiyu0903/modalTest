@@ -1,22 +1,22 @@
 <!-- 提示模态框 -->
-<div class="y-modal" data-keyboard="true" data-backdrop="false" tabindex="-1" role="dialog" style="display: none; " #promptDiv>
-  <div class="y-modal-dialog">
-    <div class="y-modal-content">
-      <div class="y-modal-header y-color">
-        <span class="y-modal-title y-font">提示</span>
-        <span class="y-warn-icon"></span>
-        <button type="button" class="y-close" aria-label="Close" data-dismiss="modal">
+<div class="z-modal" data-keyboard="true" data-backdrop="true" tabindex="-1" role="dialog" style="display: none; " #promptDiv>
+  <div class="z-modal-dialog">
+    <div class="z-modal-content">
+      <div class="z-modal-header z-color">
+        <span class="z-modal-title z-font">提示</span>
+        <span class="z-warn-icon"></span>
+        <button type="button" class="z-close" aria-label="Close" data-dismiss="modal">
           &times;
         </button>
       </div>
-      <form class="y-form-horizontal">
-        <div class="y-modal-body y-font">
-          <div class="y-modal-warning-icon"></div>
-          <div class="y-msg-prompt font">{{message}}</div>
+      <form class="z-form-horizontal">
+        <div class="z-modal-body z-font">
+          <div class="z-modal-warning-icon"></div>
+          <div class="z-msg-prompt font">{{message}}</div>
         </div>
       </form>
-      <div class="y-modal-footer">
-        <button class="y-sure-btn y-color" nz-button nzType="primary" (click)="close()">确定</button>
+      <div class="z-modal-footer">
+        <button class="z-sure-btn z-color" nz-button nzType="primary" (click)="close()">确定</button>
       </div>
     </div>
   </div>
